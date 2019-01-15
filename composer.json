@@ -1,0 +1,9 @@
+{
+    "name": "phpbenchmarks/yii-common",
+    "license": "proprietary",
+    "type": "project",
+    "require": {
+        "yiisoft/yii2": "^2.0",
+        "phpbenchmarks/benchmark-rest-data": "1.0.0"
+    }
+}
