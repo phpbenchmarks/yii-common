@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpBenchmarksYii\HelloWorld\app\controllers;
+namespace PhpBenchmarksYiiHello\controllers;
 
 use yii\web\Controller;
 

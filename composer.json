@@ -1,10 +1,5 @@
 {
     "name": "phpbenchmarks/yii-common",
     "license": "proprietary",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "PhpBenchmarksYii\\HelloWorld\\": ""
-        }
-    }
+    "type": "project"
 }
