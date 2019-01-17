@@ -5,14 +5,12 @@ namespace PhpBenchmarksYiiRest\controllers;
 use yii\web\Controller;
 use PhpBenchmarksYiiRest\EventListener\DefineLocaleEventListener;
 use PhpBenchmarksYiiRest\services\Users;
-use yii\helpers\Json;
 
 class RestapiController extends Controller
 {
  
     /**
-     *
-     * @return string
+     * @return \yii\web\Response
      */
     public function actionIndex()
     {
