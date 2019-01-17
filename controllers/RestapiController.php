@@ -4,6 +4,8 @@ namespace PhpBenchmarksYiiRest\controllers;
 
 use yii\web\Controller;
 use PhpBenchmarksYiiRest\EventListener\DefineLocaleEventListener;
+use PhpBenchmarksYiiRest\services\Users;
+use yii\helpers\Json;
 
 class RestapiController extends Controller
 {
@@ -16,7 +18,9 @@ class RestapiController extends Controller
     {
     	\Yii::$app->on(DefineLocaleEventListener::EVENT_NAME, function(){DefineLocaleEventListener::defineLocale();});
     	\Yii::$app->trigger(DefineLocaleEventListener::EVENT_NAME);
-    	//\Yii::$app->language="fr_FR";
-    	return "rest ".\Yii::t("phpbenchmarks", "translated.2");
+    	$datas=(new Users())->serialize();
+    	return $this->asJson($datas);
     }
+    
+    
 }
