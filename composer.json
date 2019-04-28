@@ -4,6 +4,6 @@
     "type": "project",
     "require": {
         "yiisoft/yii2": "^2.0",
-        "phpbenchmarks/benchmark-rest-data": "1.0.0"
+        "phpbenchmarks/benchmark-rest-data": "1.1.0"
     }
 }

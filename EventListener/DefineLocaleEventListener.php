@@ -7,12 +7,14 @@ namespace PhpBenchmarksYiiRest\EventListener;
  * @author jcheron <myaddressmail@gmail.com>
  *
  */
-class DefineLocaleEventListener {
+class DefineLocaleEventListener
+{
     const EVENT_NAME = 'defineLocale';
 
-    public static function defineLocale(){
+    public static function defineLocale()
+    {
+        // "aa_BB" should be "en" but yii don't allow to have a locale on 2 digits
         $locales = ['fr_FR', 'en_GB', 'aa_BB'];
-        $locale = $locales[rand(0, 2)];
-        \Yii::$app->language=$locale;
+        \Yii::$app->language = $locales[rand(0, 2)];
     }
 }

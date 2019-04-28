@@ -8,17 +8,19 @@ use PhpBenchmarksYiiRest\services\Users;
 
 class RestapiController extends Controller
 {
- 
-    /**
-     * @return \yii\web\Response
-     */
+    /** @return \yii\web\Response */
     public function actionIndex()
     {
-    	\Yii::$app->on(DefineLocaleEventListener::EVENT_NAME, function(){DefineLocaleEventListener::defineLocale();});
-    	\Yii::$app->trigger(DefineLocaleEventListener::EVENT_NAME);
-    	$datas=(new Users())->serialize();
-    	return $this->asJson($datas);
+        \Yii::$app->on(
+            DefineLocaleEventListener::EVENT_NAME,
+            function () {
+                DefineLocaleEventListener::defineLocale();
+            }
+        );
+        \Yii::$app->trigger(DefineLocaleEventListener::EVENT_NAME);
+
+        return $this->asJson(
+            (new Users())->serialize()
+        );
     }
-    
-    
 }
