@@ -25,7 +25,7 @@ class ShadowComment extends Comment
     {
         return [
             'id' => $this->id,
-            'message' => str_replace('/', '\/', $this->message),
+            'message' => $this->message,
             'translated' => \Yii::t('phpbenchmarks', 'translated.2000'),
             'type' => (new ShadowCommentType($this->getType()))->toArray()
         ];
